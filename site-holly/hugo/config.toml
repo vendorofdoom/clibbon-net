@@ -29,3 +29,4 @@ googleAnalytics = ""
   [params.social]
   linkedin      = "https://www.linkedin.com/in/hollyclibbon/"
   github        = "https://github.com/vendorofdoom/"
+  itch          = "https://vendorofdoom.itch.io/"

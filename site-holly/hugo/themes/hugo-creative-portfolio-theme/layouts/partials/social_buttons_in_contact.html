@@ -54,4 +54,9 @@
     <i class="fa fa-whatsapp"></i>
   </a>
   {{end}}
+  {{ with .Site.Params.social.itch }}
+  <a href="{{ . }}" data-animate-hover="pulse" class="external" title="Itch">
+    <i class="fab fa-itch-io"></i>
+  </a>
+  {{end}}
 </p>
