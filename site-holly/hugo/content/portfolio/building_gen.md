@@ -5,7 +5,9 @@ showonlyimage = true
 title = "Procedural Mass Modelling"
 +++
 
-Procedural Mass Modelling for Brutalist Architecture.
+Experimenting with procedural mass modelling to create buildings in a Brutalist style.
+
+<!--more-->
 
 Made in Unity. This was a team project.
 
