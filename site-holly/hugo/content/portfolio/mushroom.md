@@ -1,7 +1,7 @@
 +++
 draft = true
 image = "images/mush.gif"
-showonlyimage = false
+showonlyimage = true
 date = 2022-01-27T20:16:13Z
 title = "Mushroom Character"
 weight = 5

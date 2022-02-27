@@ -1,7 +1,7 @@
 +++
 draft = true
 image = "images/kitchen_objects.gif"
-showonlyimage = false
+showonlyimage = true
 date = 2022-01-30T23:21:00Z
 title = "Kitchen Objects"
 weight = 6
