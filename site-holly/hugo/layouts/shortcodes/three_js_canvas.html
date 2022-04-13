@@ -1,0 +1,96 @@
+<!-- Adapted from 
+    https://threejs.org/examples/webgl_loader_fbx.html 
+    https://discourse.gohugo.io/t/newbie-webgl-three-js-canvas-appears-offset/9191
+-->
+
+
+
+<div id="webGlDiv">
+
+
+<script type="module">
+
+    import * as THREE from 'three';
+    import { OrbitControls } from '/js/controls/OrbitControls.js';
+    import { FBXLoader } from '/js/loaders/FBXLoader.js';
+
+    let camera, scene, renderer;
+
+    const clock = new THREE.Clock();
+
+    let mixer;
+
+    init();
+    animate();
+
+    function init() {
+
+        const container = document.getElementById( 'webGlDiv' );
+
+        camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+        camera.position.set( 100, 150, 300 );
+
+        scene = new THREE.Scene();
+        scene.background = new THREE.Color( 0xf4f4f4 );
+        scene.fog = new THREE.Fog( 0xf4f4f4, 200, 1000 );
+
+        const hemiLight = new THREE.HemisphereLight( 0xffffff, 0x444444 );
+        hemiLight.position.set( 0, 200, 0 );
+        scene.add( hemiLight );
+
+        const dirLight = new THREE.DirectionalLight( 0xffffff );
+        dirLight.position.set( 0, 200, 100 );
+        dirLight.castShadow = true;
+        dirLight.shadow.camera.top = 300;
+        dirLight.shadow.camera.bottom = - 300;
+        dirLight.shadow.camera.left = - 300;
+        dirLight.shadow.camera.right = 300;
+        scene.add( dirLight );
+
+        // ground
+        const mesh = new THREE.Mesh( new THREE.PlaneGeometry( 2000, 2000 ), new THREE.MeshPhongMaterial( { color: 0x999999, depthWrite: false } ) );
+        mesh.rotation.x = - Math.PI / 2;
+        mesh.receiveShadow = true;
+        scene.add( mesh );
+
+        // model
+        const loader = new FBXLoader();
+        loader.load( "{{ .Get 0 }}", function ( object ) {
+
+            object.traverse( function ( child ) {
+
+                if ( child.isMesh ) {
+
+                    child.castShadow = true;
+                    child.receiveShadow = true;
+
+                }
+
+            } );
+
+            object.scale.multiplyScalar("{{ .Get 1 }}");
+            object.rotation.y = "{{ .Get 2 }}";
+
+            scene.add( object );
+
+        } );
+
+        renderer = new THREE.WebGLRenderer( { antialias: true } );
+        renderer.setPixelRatio( window.devicePixelRatio );
+        renderer.setSize( 500, 300 );
+        renderer.shadowMap.enabled = true;
+        container.appendChild( renderer.domElement );
+
+        const controls = new OrbitControls( camera, renderer.domElement );
+        controls.target.set( 0, 100, 0 );
+        controls.update();
+
+    }
+
+    function animate() {
+
+        requestAnimationFrame( animate );
+        renderer.render( scene, camera );
+    }
+
+</script>
