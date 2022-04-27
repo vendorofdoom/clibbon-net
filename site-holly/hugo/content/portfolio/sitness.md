@@ -86,7 +86,7 @@ For the main menu I designed a diegetic interface in the form of a planet which 
 
 #### 3D Modelling
 
-I designed the initial layout and created some simple models for the beach scene in Maya. Considering that the player should be seated for our VR application, I chose a cove style layout for the beach scene to draw the player's gaze forwards out to sea.  The scene was enhanced further by [Bato's](https://bato.crd.co/) 3D models and animated guide, as well as lighting and sounds added by PJ. 
+I designed the initial layout and created some simple models for the beach scene in Maya. Considering that the player should be seated for our VR application, I chose a cove style layout for the beach scene to draw the player's gaze forwards out to sea.  The scene was enhanced further by [Bato's](https://bato.crd.co/) 3D models and animated guide, as well as lighting and sounds added by PJ.
 
 {{< figure src="/images/sitness/beach_cove_design.png" alt="Design for the beach scene layout" >}}
 
@@ -107,8 +107,6 @@ I designed the initial layout and created some simple models for the beach scene
 {{< figure src="/images/sitness/gen_clouds.gif" alt="A gif of the cloud generation">}}
 
 *Create clouds by stretching your arms apart, "swoosh" clouds away by bringing your arms back together*
-
-
 
 I worked with [Sean](http://seanhagstrom.com/) to design and implement the cloud generation interaction for the warm up scene. We spent a lot of time refining the logic that controls the position and rotation of the cloud "spawn" point relative to the player's controllers.
 
@@ -193,17 +191,19 @@ The guidance system takes the form of a moving sphere for each hand. The movemen
 
 I chose not to implement the guidance system for the planet walker scene for a few reasons: firstly, the guiding avatar is hidden during the exercise and replaced by a guiding moon and secondly, the arm swing exercise is not as timing based as the warm up and cool down exercises.
 
-To allow the player to enable/disable the guidance system based on their preference, I added a moon to the main menu scene which can be selected to toggle the guidance system on/off. The chosen guidance system setting is stored in the player's [PlayerPrefs](https://docs.unity3d.com/ScriptReference/PlayerPrefs.html) so that it persists within each scene.
+To allow the player to enable/disable the guidance system based on their preference, I added a moon to the main menu scene which can be selected to toggle the guidance system on/off. The chosen guidance system setting is stored in the player's [PlayerPrefs](https://docs.unity3d.com/ScriptReference/PlayerPrefs.html) so that it persists between each scene.
 
 {{< line_break >}}
 
 {{< figure src="/images/sitness/moon_o_settings.gif" alt="A gif of the main menu moon that toggles the guidance system on and off">}}
 
-*Click the moon to toggle the guidance system on/off*
+*Select the moon to toggle the guidance system on/off*
 
-For the UI elements I created a simple fresnel shader for the guiding spheres and some custom sprites for the controller icons in a font that matched our existing UI.
+For the UI elements I created a simple fresnel outline shader for the guiding spheres and some custom sprites for the controller icons in a font that matched our existing UI.
 
-The two main challenges I faced whilst implementing the guidance system were: 1. trying not to clutter the scene, and 2. keeping the guiding spheres within the field of view so the player can concentrate on the motion without having to move their head around too much. In terms of future development, I did find some of the exercises more challenging when trying to keep in time with the guiding avatar so perhaps some exercise adaptability settings are required to make Sitness more appealing to a wider audience. 
+The two main challenges I faced whilst implementing the guidance system were: 1. trying not to clutter the scene, and 2. keeping the guiding spheres within the field of view so the player can concentrate on the motion without having to move their head around too much. 
+
+In terms of future development, I did find some of the exercises more strenuous when trying to keep in time with the guiding avatar so perhaps some exercise adaptability settings are required. 
 
 [CloudGenGuidance.cs](https://github.com/vendorofdoom/vr-sitness-individual/blob/main/Sitness/Assets/Scripts/CloudGenGuidance.cs)  
 [CoolDownGuidance.cs](https://github.com/vendorofdoom/vr-sitness-individual/blob/main/Sitness/Assets/Scripts/CoolDownGuidance.cs)  
