@@ -18,7 +18,7 @@ Sitness was a group coursework project created for our Virtual Reality module. T
 + [Concept](#concept)
 + [Design](#design)
 + [Implementation](#implementation)
-+ [Reflections](#reflection)
++ [Reflections](#reflections)
 + [Individual Additional Feature](#individual-additional-feature)
 ---------------------------
 
@@ -30,9 +30,9 @@ Sitness is a VR application designed to encourage physical activity through "exe
 
 We designed three "exergames" that could form a basic routine: a warm up, a main exercise, and a cool down.
 
-For each "exergame" we devised a metaphor to disguise the movement as a fun and powerful VR interaction. Lighting, sounds and visuals are used to convey the mood of each exercise and game elements are utilised to keep the player engaged in the exercise.
+For each "exergame" we devised a metaphor to disguise the movement as a fun and powerful VR interaction. Lighting, sounds and visuals are used to convey the mood of each exercise and game elements keep the player engaged.
 
-The exercises we chose to implement came from Paul Eugene, a fitness instructor, who posts many chair fitness routines on their [YouTube channel](https://www.youtube.com/c/PaulEugene/featured).
+The exercises we chose to implement came from Paul Eugene, a fitness instructor, who posts many chair fitness routines on his [YouTube channel](https://www.youtube.com/c/PaulEugene/featured).
 
 #### Storyboards
 
@@ -59,7 +59,7 @@ For the main exercise we wanted something that would raise the heart rate a litt
 
 {{< line_break >}}
 
-The metaphor for this exercise is that you are keeping the planet moving by walking on top of the world! As you swing your arms, the planet rotates beneath you.
+The metaphor for this exercise is that you are keeping the planet spinning by walking on top of the world! As you swing your arms, the planet rotates beneath you.
 
 ![Design for the core training exercise](/images/sitness/planet_walker_design.png)
 
@@ -86,15 +86,15 @@ For the main menu I designed a diegetic interface in the form of a planet which 
 
 #### 3D Modelling
 
-I designed the initial layout and created some simple models for the beach scene in Maya. The scene was enhanced further by [Bato's](https://bato.crd.co/) 3D models and animated guide, as well as lighting and sounds added by PJ.
+I designed the initial layout and created some simple models for the beach scene in Maya. Considering that the player should be seated for our VR application, I chose a cove style layout for the beach scene to draw the player's gaze forwards out to sea.  The scene was enhanced further by [Bato's](https://bato.crd.co/) 3D models and animated guide, as well as lighting and sounds added by PJ. 
 
 {{< figure src="/images/sitness/beach_cove_design.png" alt="Design for the beach scene layout" >}}
 
-*A sketch of the cove scene layout and the two scenery pieces I modelled, the cove landscape and the headland with a lighthouse. Considering that the player should be seated for our VR application, I chose a cove style layout for the beach scene to draw the player's gaze forwards out to sea.*
+*A sketch of the cove scene layout, the cove model, and the lighthouse on a headland model*
 
 {{< figure src="/images/sitness/tree_models.png" alt="A trio of tree models" >}}
 
-*Three, low-poly style trees I modelled for the beach scene.*
+*Three, low-poly style trees I modelled for the beach scene*
 
 #### Programming
 
@@ -106,7 +106,7 @@ I designed the initial layout and created some simple models for the beach scene
 
 {{< figure src="/images/sitness/gen_clouds.gif" alt="A gif of the cloud generation">}}
 
-*Creating clouds by stretching your arms, swooshing clouds away by bringing your arms back together*
+*Create clouds by stretching your arms apart, "swoosh" clouds away by bringing your arms back together*
 
 
 
@@ -161,11 +161,11 @@ I added haptics to the main menu scene so that the player could "feel" when they
 
 The most enjoyable part of this project for me was designing the scenes and exercise metaphors, and then figuring out with my teammates how to implement the custom VR interactions. Creating custom interactions gave us the opportunity to spend more time putting the game maths we've been learning to good use.
 
-I found haptics to be unexpectedly valuable, initially I was just adding them for completeness sake but I soon realised they have a subtle but marked positive effect on the VR experience. This was particularly noticeable in the main menu scene where adding a short vibration when the player's controller intersects with the planet really helped to guide their movements.
+I found haptics to be unexpectedly valuable, initially I was just adding them for completeness sake but I soon realised they have a subtle but markedly positive effect on the VR experience. This was particularly noticeable in the main menu scene where adding a short vibration when the player's controller intersects with the planet really helped to guide their movements.
 
-It was challenging at times to understand whether a player making a certain body movement without excluding people of different sizes and mobilities. A lot of time was spent between me and Sean playing around with the various mechanics, but in the end we weren't super strict in confining the player to certain movements and chose to focus more on the gameplay elements instead.
+It was challenging at times to understand whether a player was making a certain body movement without excluding people of different sizes and mobilities. A lot of time was spent between me and Sean playing around with the various mechanics, but in the end we weren't super strict in confining the player to certain movements and chose to focus more on the gameplay elements instead.
 
-Working on this project I learnt more about the limitations of developing for Quest, particularly in regards to the precision of the z-buffer when trying to render a large scene like the cloud generation scene where there are mountains far away in the distance.
+Working on this project I learnt more about the limitations of developing for the Quest 2, particularly in regards to the precision of the z-buffer when trying to render a large scene like the cloud generation scene where there are mountains far away in the distance.
 
 I felt our team had a nice variety of skillsets which helped us to create a well-rounded VR experience. PJ added polish to each scene with custom sounds, thoughtful lighting and an informative UI system; Sean worked tirelessly to iron out any problems with the VR interactions and gameplay mechanics; and Bato brought the Sitness world to life with his charming 3D models and animations.
 
@@ -173,8 +173,40 @@ Overall, I am really pleased with what we've managed to create. On multiple occa
 
 ### Individual Additional Feature
 
-In addition to the group work described above, we were also required to chose another feature to implement individually to take the project further.
+#### Guidance System
 
-TODO
+In addition to our group work, we were asked to add one feature individually to further develop our concept. Based on the feedback we received from demoing our work, I chose to implement a simple guidance system to help players keep in time with the guiding avatar's movements.
+
+{{< line_break >}}
+
+{{< figure src="/images/sitness/cloud_gen_guidance.gif" alt="A gif of the warm up scene guidance system">}}
+
+*Follow the guides to generate a cloud and "swoosh" it away!*
+
+The guidance system takes the form of a moving sphere for each hand. The movements of these guiding spheres are tied to animation events in the guiding avatar animation. I added a guidance system to both the cloud generation warm up scene and the cool down beach scene. In addition to the moving spheres, there are controller button icons which can be displayed inside each sphere to help the player understand which buttons they need to press during an interaction. E.g. In the beach scene some initial configuration is required using the X and Y buttons.
+
+{{< line_break >}}
+
+{{< figure src="/images/sitness/beach_guidance.gif" alt="A gif of the cool down scene guidance">}}
+
+*Configure the water level using the X and Y buttons*
+
+I chose not to implement the guidance system for the planet walker scene for a few reasons: firstly, the guiding avatar is hidden during the exercise and replaced by a guiding moon and secondly, the arm swing exercise is not as timing based as the warm up and cool down exercises.
+
+To allow the player to enable/disable the guidance system based on their preference, I added a moon to the main menu scene which can be selected to toggle the guidance system on/off. The chosen guidance system setting is stored in the player's [PlayerPrefs](https://docs.unity3d.com/ScriptReference/PlayerPrefs.html) so that it persists within each scene.
+
+{{< line_break >}}
+
+{{< figure src="/images/sitness/moon_o_settings.gif" alt="A gif of the main menu moon that toggles the guidance system on and off">}}
+
+*Click the moon to toggle the guidance system on/off*
+
+For the UI elements I created a simple fresnel shader for the guiding spheres and some custom sprites for the controller icons in a font that matched our existing UI.
+
+The two main challenges I faced whilst implementing the guidance system were: 1. trying not to clutter the scene, and 2. keeping the guiding spheres within the field of view so the player can concentrate on the motion without having to move their head around too much. In terms of future development, I did find some of the exercises more challenging when trying to keep in time with the guiding avatar so perhaps some exercise adaptability settings are required to make Sitness more appealing to a wider audience. 
+
+[CloudGenGuidance.cs](https://github.com/vendorofdoom/vr-sitness-individual/blob/main/Sitness/Assets/Scripts/CloudGenGuidance.cs)  
+[CoolDownGuidance.cs](https://github.com/vendorofdoom/vr-sitness-individual/blob/main/Sitness/Assets/Scripts/CoolDownGuidance.cs)  
+[GuidanceSettings.cs](https://github.com/vendorofdoom/vr-sitness-individual/blob/main/Sitness/Assets/Scripts/GuidanceSettings.cs)
 
 
