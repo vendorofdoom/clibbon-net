@@ -149,7 +149,7 @@ These spawned objects each had the gaze interactable script attached meaning tha
 
 {{< line_break >}}
 
-I added haptics to the main menu scene so that the player could "feel" when they were touching the planet or an exercise location. I also added script to have the UI text orient itself suitably to still be readable to the player as they rotate the planet. I added a general scene change script to do the screen fade and scene changes.
+I wrote a script to allow the player to grab and rotate the main menu planet. I added haptics to the main menu scene so that the player could "feel" when they were touching the planet or an exercise location. I also added script to have the UI text orient itself suitably to still be readable to the player as they rotate the planet. I added a general scene change script to do the screen fade and scene changes.
 
 [GrabRotate.cs](https://github.com/vendorofdoom/vr-sitness-individual/blob/main/Sitness/Assets/Scripts/GrabRotate.cs)  
 [MenuTextDirection.cs](https://github.com/vendorofdoom/vr-sitness-individual/blob/main/Sitness/Assets/Scripts/MenuTextDirection.cs)  
@@ -169,9 +169,15 @@ I felt our team had a nice variety of skillsets which helped us to create a well
 
 Overall, I am really pleased with what we've managed to create. On multiple occasions, after presenting our work, we received feedback that we should consider making our application available via [SideQuest](https://sidequestvr.com/). This is something I would certainly consider but not until we've playtested with a wider audience!
 
+---------------------------
+
 ### Individual Additional Feature
 
 #### Guidance System
+
+{{< youtube id="M6e87Nn4ckU" title="A walkthrough video of Sitness' new guidance system feature" >}}
+
+{{< line_break >}}
 
 In addition to our group work, we were asked to add one feature individually to further develop our concept. Based on the feedback we received from demoing our work, I chose to implement a simple guidance system to help players keep in time with the guiding avatar's movements.
 
@@ -208,5 +214,3 @@ In terms of future development, I did find some of the exercises more strenuous 
 [CloudGenGuidance.cs](https://github.com/vendorofdoom/vr-sitness-individual/blob/main/Sitness/Assets/Scripts/CloudGenGuidance.cs)  
 [CoolDownGuidance.cs](https://github.com/vendorofdoom/vr-sitness-individual/blob/main/Sitness/Assets/Scripts/CoolDownGuidance.cs)  
 [GuidanceSettings.cs](https://github.com/vendorofdoom/vr-sitness-individual/blob/main/Sitness/Assets/Scripts/GuidanceSettings.cs)
-
-
