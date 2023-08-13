@@ -1,4 +1,4 @@
-baseURL = 'http://alex.clibbon.co.uk/'
+baseURL = 'https://alex.clibbon.co.uk/'
 languageCode = 'en-uk'
 title = 'alex_clibbon'
 theme = 'hugo-theme-console'
