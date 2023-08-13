@@ -1,3 +1,3 @@
-[submodule "site-alex/themes/hugo-theme-console"]
-	path = site-alex/themes/hugo-theme-console
+[submodule "themes/hugo-theme-console"]
+	path = themes/hugo-theme-console
 	url = https://github.com/mrmierzejewski/hugo-theme-console.git
