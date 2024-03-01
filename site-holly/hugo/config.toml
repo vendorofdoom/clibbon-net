@@ -14,7 +14,7 @@ googleAnalytics = ""
   description = "Portfolio for Holly Clibbon"
   copyright = "&copy;2022 Holly Clibbon"
   sidebarAbout = [
-    "MSc AR/VR student at Goldsmiths University, London. Click on the images in my portfolio to learn more about each project piece."
+    "A portfolio highlighting some of the work completed during my time as an MSc AR/VR student at Goldsmiths University, London (2021/22). Click on the images in my portfolio to learn more about each project piece."
   ]
   # Nav links in the side bar
   [[params.navlinks]]
