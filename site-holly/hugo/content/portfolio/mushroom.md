@@ -1,10 +1,10 @@
 +++
-draft = true
+draft = false
 image = "images/mush.gif"
 showonlyimage = true
 date = 2022-01-27T20:16:13Z
 title = "Mushroom Character"
-weight = 5
+weight = 7
 +++
 
 3D animation of a little mushroom character. 

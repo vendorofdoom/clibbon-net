@@ -1,8 +1,9 @@
 +++
-draft = true
+draft = false
 image = "images/sitness/turtle_beach.png"
 showonlyimage = true
 title = "Sitness"
+weight = 5
 +++
 
 **Sitness** is a VR fitness application for seated exercises, implemented in Unity.

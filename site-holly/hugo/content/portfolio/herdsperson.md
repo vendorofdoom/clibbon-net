@@ -1,5 +1,5 @@
 +++
-draft = true
+draft = false
 image = "images/herdsperson_to_town.png"
 showonlyimage = true
 date = 2022-01-30T23:21:00Z
@@ -7,7 +7,7 @@ title = "Herdsperson"
 weight = 2
 +++
 
-A game inspired by the alpine tradition of [Alpabzug](https://en.wikipedia.org/wiki/Almabtrieb). 
+[Herdsperson](https://vendorofdoom.itch.io/goldsmiths-ipg-assignment-2) is game inspired by the alpine tradition of [Alpabzug](https://en.wikipedia.org/wiki/Almabtrieb). 
 
 <!--more-->
 

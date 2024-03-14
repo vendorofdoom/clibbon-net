@@ -1,11 +1,12 @@
 +++
-draft = true
+draft = false
 image = "images/cloud_train.png"
 showonlyimage = true
 title = "Cloud Train"
+weight = 4
 +++
 
-A procedurally generated model train set.
+[Cloud Train](https://vendorofdoom.itch.io/cloud-train) is a procedurally generated model train set.
 
 <!--more-->
 

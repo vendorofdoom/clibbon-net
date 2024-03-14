@@ -1,5 +1,5 @@
 +++
-draft = true
+draft = false
 image = "images/inner_balance.png"
 showonlyimage = true
 date = 2022-01-30T23:21:00Z
@@ -7,7 +7,7 @@ title = "Inner Balance"
 weight = 1
 +++
 
-Inner Balance is a short story-based game with puzzle elements. 
+[Inner Balance](https://vendorofdoom.itch.io/goldsmiths-ipg-assignment-1) is a short story-based game with puzzle elements. 
 
 <!--more-->
 

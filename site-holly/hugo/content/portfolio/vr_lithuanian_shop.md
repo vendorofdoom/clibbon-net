@@ -1,10 +1,10 @@
 +++
-draft = true
+draft = false
 image = "images/vr_lithuanian_shop_1.png"
 showonlyimage = true
 date = 2022-01-30T23:21:00Z
 title = "VR Lithuanian Shop"
-weight = 4
+weight = 8
 +++
 
 A short VR piece exploring how VR could be used for learning vocabulary in a foreign language.

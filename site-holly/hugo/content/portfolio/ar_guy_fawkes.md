@@ -1,10 +1,10 @@
 +++
-draft = true
+draft = false
 image = "images/guy_fawkes.png"
 showonlyimage = true
 date = 2022-01-30T23:21:00Z
 title = "Guy Fawkes: AR Experience"
-weight = 3
+weight = 11
 +++
 
 An AR game where you must follow clues to find Guy Fawkes and foil the Gunpowder Plot.

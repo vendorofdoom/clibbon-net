@@ -1,8 +1,9 @@
 +++
-draft = true
+draft = false
 image = "images/proc_gen_building.gif"
 showonlyimage = true
 title = "Procedural Mass Modelling"
+weight = 10
 +++
 
 Experimenting with procedural mass modelling to create buildings in a Brutalist style.
